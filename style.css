@@ -1,79 +1,139 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-#taskHolder{
-    display: flex;
-    flex-direction: column;
+#container {
+    margin: 25% auto;
+    transform: translateY(-50%);
     justify-content: center;
     align-items: center;
-    width: 70vw;
-    margin: 20% auto 0 auto;
-    transform: translateY(-50%);
     background-color: white;
-    border-radius: 10px;
     box-sizing: border-box;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding-top: 2.5em;
-    padding-bottom: 2.5em;
+    width: 40vw;
+    padding: 5em;
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
 }
-#title{
-    margin: 2.5vw;
-    font-size: 2em;
+body{
+    overflow: hidden;
+    padding: 10vw 0;
 }
-input{
-    padding: 10px;
-    width: 65%;
-    border: 1px solid 5px;
-    border-radius: 5px;
-    margin: 1vw;
+
+#userInput {
+    height: 3em;
+    width: 80%;
+    padding: 0 .5em;
 }
-button{
-    padding: 10px;
-    margin-left: 10px;
-    background-color: #28a745;
+
+#add {
+    margin: 1em 40%;
+    transform: translateX(-50%);
+    width: 10em;
+    padding: .2em .5em;
+    background-color: red;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    width: 35%;
-    margin-top: 1vw;
 }
-button:hover{
-    background-color: #218838;
+
+#taskContainer {
+    padding-left: 2.5vw;
+    margin-top: 2em;
 }
-#container{
-    width: 100%;
-    justify-content: center;
+
+.tasks {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: .5em;
+    margin-bottom: .5em;
+    width: 20vw;
+    margin-right: 10vw;
 }
-p{
-    display: block;
-    gap: 10px;
-    text-align: center;
-    padding: 3px;
-    justify-content: space-between;
-    border: 1px solid black;
-    margin: 3vw auto 0 auto;
-    border-radius: 3px;
-    font-weight: 100;
-    width: 75%;
+
+.tasks p {
     word-wrap: break-word;
-    text-wrap: wrap;
+    overflow-wrap: break-word;
+    white-space: normal;
+    flex: 1 1 50%;
+    margin: 0.5vw 0;
 }
-@media screen and (max-width: 1320px) {
-    body{
-        padding-top: 10vw;
+
+.tasks input[type="checkbox"] {
+    margin-right: .5vw;
+}
+
+.tasks button {
+    padding: .2vw .5vw;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    right: 6px;
+}
+
+.tasks button:hover {
+    background-color: darkred;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    #container {
+        width: 50vw;
+    }
+    .tasks {
+        width: 25vw;
+        margin-right: 5vw;
     }
 }
-@media screen and (max-width: 1000px) {
+
+@media (max-width: 992px) {
     body{
-        padding-top: 20vw;
+        padding: 30vw 0;
+    }
+    #container {
+        width: 60vw;
+    }
+    .tasks {
+        width: 30vw;
     }
 }
-@media screen and (max-width: 576px) {
+
+@media (max-width: 768px) {
     body{
-        padding-top: 40vw;
+        padding: 30vw 0;
+    }
+    #container {
+        width: 70vw;
+    }
+    #userInput {
+        width: 100%;
+    }
+    .tasks {
+        width: 40vw;
+        margin-right: 2vw;
+    }
+}
+
+@media (max-width: 576px) {
+    body{
+        padding: 30vw 0;
+    }
+    #container {
+        width: 80vw;
+        padding: 2em;
+    }
+    .tasks {
+        width: 100%;
+        margin-right: 0;
+    }
+    #add {
+        width: 30%;
+        margin: 1em 50%;
+        transform: translateX(-50%);
+    }
+    #userInput {
+        width: 100%;
     }
 }
