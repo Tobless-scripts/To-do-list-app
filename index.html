@@ -12,12 +12,11 @@
     <title>To-Do list app</title>
 </head>
 <body>
-    <div id="taskHolder">
-        <h1 id="title">To-Do List app</h1>
-        <input type="text" name="taskValue" id="task" placeholder="Enter a new task">
-        <button type="button" onclick="addTask()">Add Task</button>
-        <h4 id="container"></h4>
+    <div id="container">
+        <input type="text" name="userInput" id="userInput" placeholder="Enter a new task...">
+        <button id="add" onclick="addTasks()">Add task</button>
     </div>
+    <div id="taskContainer"></div>
 </body>
 <script src="script.js"></script>
 </html>
